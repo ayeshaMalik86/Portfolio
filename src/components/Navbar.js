@@ -23,7 +23,7 @@ const Navbar = () => {
   const sharedClasses = "flex items-center text-gray-600 hover:text-black cursor-pointer gap-2";
 
   return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-white shadow">
+    <nav className="font-mona flex justify-between items-center px-6 py-4 bg-white shadow">
       <div className="text-lg font-semibold flex items-center">
         <span className="text-gray-600">&lt;/&gt;</span>
         <span className="ml-2">Ayesha Malik</span>

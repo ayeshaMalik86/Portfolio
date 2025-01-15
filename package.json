@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/lato": "^5.1.1",
+    "@fontsource/mona-sans": "^5.0.1",
     "@heroicons/react": "^1.0.6",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
