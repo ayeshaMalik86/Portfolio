@@ -51,7 +51,7 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 right-0 bg-white shadow-lg p-4 space-y-4 w-40">
+        <div className="md:hidden absolute top-16 right-0 bg-white shadow-lg p-4 space-y-4 w-40 z-10">
           {menuItems.map((item, index) => (
             <Link key={index} to={item.path} className={sharedClasses}>
               {item.icon}

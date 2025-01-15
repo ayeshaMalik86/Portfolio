@@ -29,7 +29,7 @@ const Skills = () => {
           <DividerWithText text="Programming Languages" />
           <div className="flex gap-10">
             <div
-              className="flex items-center md:w-64 md:h-16 rounded-lg shadow-md px-4"
+              className="flex items-center w-64 h-16 rounded-lg shadow-md px-4"
               style={{
                 background: `
                   linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
