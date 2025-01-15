@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   SearchIcon,
   CubeIcon,
@@ -13,11 +14,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: "Skills", icon: <ViewGridIcon className="w-5 h-5 text-gray-600 stroke-1" /> },
-    { label: "Projects", icon: <CubeIcon className="w-5 h-5 text-gray-600 stroke-1" /> },
-    { label: "Experience", icon: <CollectionIcon className="w-5 h-5 text-gray-600 stroke-1" /> },
-    { label: "Education", icon: <AcademicCapIcon className="w-5 h-5 text-gray-600 stroke-1" /> },
-    { label: "Résumé", icon: <DocumentTextIcon className="w-5 h-5 text-gray-600 stroke-1" /> },
+    { label: "Skills", icon: <ViewGridIcon className="w-5 h-5 text-gray-600 stroke-1" />, path: "/skills" },
+    { label: "Projects", icon: <CubeIcon className="w-5 h-5 text-gray-600 stroke-1" />, path: "/projects" },
+    { label: "Experience", icon: <CollectionIcon className="w-5 h-5 text-gray-600 stroke-1" />, path: "/experience" },
+    { label: "Education", icon: <AcademicCapIcon className="w-5 h-5 text-gray-600 stroke-1" />, path: "/education" },
+    { label: "Resumé", icon: <DocumentTextIcon className="w-5 h-5 text-gray-600 stroke-1" />, path: "/resume" },
   ];
 
   const sharedClasses = "flex items-center text-gray-600 hover:text-black cursor-pointer gap-2";
@@ -31,16 +32,16 @@ const Navbar = () => {
 
       <div className="hidden md:flex space-x-6 gap-6 flex-wrap justify-center">
         {menuItems.map((item, index) => (
-          <p key={index} className={sharedClasses}>
+          <Link key={index} to={item.path} className={sharedClasses}>
             {item.icon}
             {item.label}
-          </p>
+          </Link>
         ))}
       </div>
 
       <div className="hidden md:flex items-center space-x-4">
-          <SearchIcon className="w-6 h-6 text-gray-600 cursor-pointer hover:text-black" />
-        </div>
+        <SearchIcon className="w-6 h-6 text-gray-600 cursor-pointer hover:text-black" />
+      </div>
 
       <div className="md:hidden flex items-center">
         <MenuIcon
@@ -52,10 +53,10 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 right-0 bg-white shadow-lg p-4 space-y-4 w-40">
           {menuItems.map((item, index) => (
-            <p key={index} className={sharedClasses}>
+            <Link key={index} to={item.path} className={sharedClasses}>
               {item.icon}
               {item.label}
-            </p>
+            </Link>
           ))}
           <div className={sharedClasses}>
             <SearchIcon className="w-6 h-6 text-gray-600 cursor-pointer hover:text-black" />

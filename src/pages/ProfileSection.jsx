@@ -19,7 +19,7 @@ const ProfileSection = () => {
         <h1 className="text-7xl font-bold  mb-10">
           Ayesha Malik,
         </h1>
-        <p className=" text-gray-600">
+        <p className="font-light text-gray-600">
             • Detail-oriented and highly motivated undergraduate student pursuing a Bachelor's degree in Software
             Engineering with a passion for innovative technology solutions.<br/>
             • Possesses a solid foundation in computer science principles and programming languages, combined
