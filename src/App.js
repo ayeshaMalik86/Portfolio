@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import ProfileSection from "./pages/ProfileSection";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
+import Experience from "./pages/Experience";
+import Education from "./pages/Education";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="/" element={<ProfileSection />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/experience" element={<Experience />}/>
+          <Route path="/education" element={<Education />}/>
         </Routes>
       </div>
     </Router>
