@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
-  SearchIcon,
+  MailIcon,
   CubeIcon,
   AcademicCapIcon,
   CollectionIcon,
@@ -12,6 +12,7 @@ import {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const menuItems = [
     { label: "Skills", icon: <ViewGridIcon className="w-5 h-5 text-gray-600 stroke-1" />, path: "/skills" },
@@ -23,11 +24,27 @@ const Navbar = () => {
 
   const sharedClasses = "flex items-center text-gray-600 hover:text-black cursor-pointer gap-2";
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <nav className="font-mona flex justify-between items-center px-6 py-4 bg-white shadow">
       <div className="text-lg font-semibold flex items-center">
-        <span className="text-gray-600">&lt;/&gt;</span>
-        <span className="ml-2">Ayesha Malik</span>
+        <Link to="/" className="flex items-center hover:text-gray-600">
+          <span className="text-gray-600">&lt;/&gt;</span>
+          <span className="ml-2">Ayesha Malik</span>
+        </Link>
       </div>
 
       <div className="hidden md:flex space-x-6 gap-6 flex-wrap justify-center">
@@ -39,8 +56,11 @@ const Navbar = () => {
         ))}
       </div>
 
-      <div className="hidden md:flex items-center space-x-4">
-        <SearchIcon className="w-6 h-6 text-gray-600 cursor-pointer hover:text-black" />
+      <div className="hidden md:flex items-center space-x-4 gap-2 text-gray-600 cursor-pointer hover:text-black">
+        <Link to="/" className={sharedClasses}>
+          <MailIcon className="w-5 h-5 text-gray-600 stroke-1" />
+          Contact me
+        </Link>
       </div>
 
       <div className="md:hidden flex items-center">
@@ -51,16 +71,27 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 right-0 bg-white shadow-lg p-4 space-y-4 w-40 z-10">
+        <div
+          ref={menuRef}
+          className="md:hidden absolute top-12 right-0 bg-white shadow-lg p-4 space-y-4 w-40 z-10"
+        >
           {menuItems.map((item, index) => (
-            <Link key={index} to={item.path} className={sharedClasses}>
+            <Link
+              key={index}
+              to={item.path}
+              className={sharedClasses}
+              onClick={() => setIsMenuOpen(false)} 
+            >
               {item.icon}
               {item.label}
             </Link>
           ))}
           <div className={sharedClasses}>
-            <SearchIcon className="w-6 h-6 text-gray-600 cursor-pointer hover:text-black" />
-          </div>
+          <Link to="/" className={sharedClasses}>
+          <MailIcon className="w-5 h-5 text-gray-600 stroke-1" />
+          Contact me
+        </Link>
+      </div>
         </div>
       )}
     </nav>

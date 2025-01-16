@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaStackOverflow, FaEnvelope, FaYoutube, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaLinkedin} from 'react-icons/fa';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from '../components/Carousel';
 
@@ -14,7 +14,7 @@ const ProfileSection = () => {
 
   return (
     <div className="font-mona flex flex-col md:flex-row items-center justify-evenly p-8 mt-[5rem]">
-      {/* Left Side */}
+
       <div className="md:w-[50%] text-left space-y-4 ">
         <h1 className="text-7xl font-bold  mb-10">
           Ayesha Malik,
@@ -26,16 +26,16 @@ const ProfileSection = () => {
             with hands-on experience in software development projects.<br/>
             • Proven ability to adapt quickly to new technologies and methodologies, coupled with excellent problem
             solving skills and a collaborative mindset.
+            Contact me 
         </p>
-        {/* Social Media Icons */}
+        <p  className='font-bold text-blue-400'>Get in Touch</p>
         <div className="flex space-x-4 text-xl">
-          <FaGithub />
-          <FaLinkedin />
-          <FaTwitter />
-          <FaStackOverflow />
-          <FaEnvelope />
-          <FaYoutube />
-          <FaFacebook />
+          <a href="https://github.com/ayeshaMalik86" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/ayesha-malik-0bb7a727a/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
         </div>
       </div>
 

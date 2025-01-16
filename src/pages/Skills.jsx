@@ -13,9 +13,9 @@ const Skills = () => {
   return (
     <div className="font-mona text-gray-900 min-h-screen">
       <div className="max-w-4xl mx-auto p-6">
-        {/* Header */}
+
         <h1 className="text-7xl font-bold mb-8 text-center">Skills</h1>
-        {/* Search Bar */}
+
         <div className="mb-6">
           <input
             type="text"
@@ -24,7 +24,6 @@ const Skills = () => {
           />
         </div>
 
-        {/* Programming Languages */}
         <div className="mb-[50px]">
           <DividerWithText text="Programming Languages" />
           <div className="flex gap-10">
@@ -59,7 +58,6 @@ const Skills = () => {
           </div>
         </div>
 
-        {/* Markup & Style */}
         <div className="mb-[50px]">
         <DividerWithText text="Markup and Style" />
           <div className="flex gap-10">
@@ -94,7 +92,6 @@ const Skills = () => {
           </div>
         </div>
 
-        {/* Libraries */}
         <div>
             <DividerWithText text="Libraries" />
           <div
