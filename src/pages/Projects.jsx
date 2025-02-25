@@ -35,12 +35,20 @@ const ProjectCard = ({ title, description, tags, demoLink, githubLink, image }) 
 const Projects = () => {
   const projects = [
     {
-      title: 'Attendance Management System',
-      description: 'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
-      tags: ['Typescript', 'Sass', 'Svelte'],
-      demoLink: 'https://attendance-management-system-silk.vercel.app/',
-      githubLink: 'https://github.com/ayeshaMalik86/Attendance-Management-System',
-      image: '/assets/attendance.png', 
+      title: 'Umault Clone',
+      description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+      tags: ['React', 'Tailwind CSS'],
+      demoLink: 'https://umault-clone-taupe.vercel.app/',
+      githubLink: 'https://github.com/ayeshaMalik86/umault_clone',
+      image: '/assets/umault.png', 
+    },
+    {
+      title: 'Sports Page',
+      description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+      tags: ['React', 'Tailwind CSS'],
+      demoLink: 'https://sports-page-alpha.vercel.app/',
+      githubLink: 'https://github.com/ayeshaMalik86/sportsPage',
+      image: '/assets/sports.png', 
     },
     {
       title: 'Ticket Project',
@@ -65,6 +73,14 @@ const Projects = () => {
       demoLink: 'https://web-page-nu-amber.vercel.app/',
       githubLink: 'https://github.com/ayeshaMalik86/webPage',
       image: '/assets/education.png', 
+    },
+    {
+      title: 'Attendance Management System',
+      description: 'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
+      tags: ['Typescript', 'Sass', 'Svelte'],
+      demoLink: 'https://attendance-management-system-silk.vercel.app/',
+      githubLink: 'https://github.com/ayeshaMalik86/Attendance-Management-System',
+      image: '/assets/attendance.png', 
     },
   ];
 

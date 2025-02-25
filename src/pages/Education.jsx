@@ -15,7 +15,7 @@ const Education = () => {
       institute: "Bahria College",
       location: "Islamabad, Pakistan",
       date: "March 2019 - August 2021",
-      description: "Got it! You’ve completed your intermediate in Computer Science, which has laid a strong foundation for your further studies in software engineering.",
+      description: "I’ve completed my intermediate in Computer Science, which has laid a strong foundation for my further studies in software engineering.",
       skills: ["JS", "TS", "CSS", "HTML", "React", "Tailwind"],
     },
   ];
