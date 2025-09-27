@@ -2,12 +2,22 @@ import React from 'react'
 
 const Resume = () => {
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/assets/Resume-1.pdf'; 
-    link.download = 'Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Check if it's a mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // For mobile devices, open in new tab
+      window.open('/assets/Resume-1.pdf', '_blank');
+    } else {
+      // For desktop, use the programmatic download
+      const link = document.createElement('a');
+      link.href = '/assets/Resume-1.pdf'; 
+      link.download = 'Resume.pdf';
+      link.target = '_blank'; // Fallback for browsers that don't support download
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   };
 
   return (
