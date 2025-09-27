@@ -6,8 +6,8 @@ const Education = () => {
       title: "Bachelor in Software Engineering",
       institute: "Bahria University Islamabad",
       location: "Islamabad, Pakistan",
-      date: "October 2021 - Present",
-      description: "I am pursuing a Bachelor's degree in Software Engineering, focusing on developing technical skills in programming, software design, and system analysis to create innovative solutions.",
+      date: "October 2021 - June 2025",
+      description: "I am a Software Engineer, focusing on developing technical skills in programming, software design, and system analysis to create innovative solutions.",
       skills: ["JS", "TS"],
     },
     {

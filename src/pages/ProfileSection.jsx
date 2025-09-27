@@ -20,8 +20,7 @@ const ProfileSection = () => {
           Ayesha Malik,
         </h1>
         <p className="font-light text-gray-600">
-            • Detail-oriented and highly motivated undergraduate student pursuing a Bachelor's degree in Software
-            Engineering with a passion for innovative technology solutions.<br/>
+            • Detail-oriented and highly motivated Software Engineer with a passion for innovative technology solutions.<br/>
             • Possesses a solid foundation in computer science principles and programming languages, combined
             with hands-on experience in software development projects.<br/>
             • Proven ability to adapt quickly to new technologies and methodologies, coupled with excellent problem

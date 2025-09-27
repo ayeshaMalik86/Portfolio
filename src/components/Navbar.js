@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:flex items-center space-x-4 gap-2 text-gray-600 cursor-pointer hover:text-black">
-        <Link to="/" className={sharedClasses}>
+        <Link to="/contact" className={sharedClasses}>
           <MailIcon className="w-5 h-5 text-gray-600 stroke-1" />
           Contact me
         </Link>
@@ -87,7 +87,7 @@ const Navbar = () => {
             </Link>
           ))}
           <div className={sharedClasses}>
-          <Link to="/" className={sharedClasses}>
+          <Link to="/contact" className={sharedClasses}>
           <MailIcon className="w-5 h-5 text-gray-600 stroke-1" />
           Contact me
         </Link>
