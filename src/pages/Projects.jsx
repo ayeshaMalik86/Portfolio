@@ -43,9 +43,17 @@ const Projects = () => {
       image: '/assets/notes-app.png', 
     },
     {
+      title: 'Suits and Sand(Real Estate Website)',
+      description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+      tags: ['React', 'Tailwind CSS', 'Next.js', 'Node.js', 'Express', 'TypeScript'],
+      demoLink: 'https://suits-and-sand-front-end.vercel.app/',
+      githubLink: '',
+      image: '/assets/suits-and-sand.png', 
+    },
+    {
       title: 'Umault Clone',
       description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-      tags: ['React', 'Tailwind CSS'],
+      tags: ['React', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS','Framer Motion'],
       demoLink: 'https://umault-clone-taupe.vercel.app/',
       githubLink: 'https://github.com/ayeshaMalik86/umault_clone',
       image: '/assets/umault.png', 
@@ -53,7 +61,7 @@ const Projects = () => {
     {
       title: 'Sports Page',
       description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-      tags: ['React', 'Tailwind CSS'],
+      tags: ['React', 'Tailwind CSS', 'JavaScript','Framer Motion','Three.js'],
       demoLink: 'https://sports-page-alpha.vercel.app/',
       githubLink: 'https://github.com/ayeshaMalik86/sportsPage',
       image: '/assets/sports.png', 
@@ -61,7 +69,7 @@ const Projects = () => {
     {
       title: 'Ticket Project',
       description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-      tags: ['React', 'Tailwind CSS'],
+      tags: ['React', 'Tailwind CSS', 'JavaScript', 'MERN', 'MongoDB', 'Node.js', 'Express'],
       demoLink: 'https://ticket-project-pi.vercel.app/',
       githubLink: 'https://github.com/ayeshaMalik86/TicketProject',
       image: '/assets/ticketproject.png', 
@@ -69,7 +77,7 @@ const Projects = () => {
     {
       title: 'Furniture',
       description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-      tags: ['React', 'Tailwind CSS'],
+      tags: ['React', 'Tailwind CSS', 'JavaScript','Framer Motion'],
       demoLink: 'https://furniture-website-y1r6.vercel.app/',
       githubLink: 'https://github.com/ayeshaMalik86/furnitureWebsite',
       image: '/assets/furniture.png', 
