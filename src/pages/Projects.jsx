@@ -35,6 +35,14 @@ const ProjectCard = ({ title, description, tags, demoLink, githubLink, image }) 
 const Projects = () => {
   const projects = [
     {
+      title: 'Note App',
+      description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+      tags: ['React', 'Tailwind CSS', 'MERN', 'MongoDB', 'Node.js', 'Express'],
+      demoLink: 'https://notes-app-frontend-mu-three.vercel.app/',
+      githubLink: 'https://github.com/ayeshaMalik86/notes-app-frontend',
+      image: '/assets/notes-app.png', 
+    },
+    {
       title: 'Umault Clone',
       description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
       tags: ['React', 'Tailwind CSS'],
