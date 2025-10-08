@@ -70,30 +70,57 @@ const Navbar = () => {
         />
       </div>
 
-      {isMenuOpen && (
-        <div
-          ref={menuRef}
-          className="md:hidden absolute top-12 right-0 bg-white shadow-lg p-4 space-y-4 w-40 z-10"
-        >
-          {menuItems.map((item, index) => (
-            <Link
-              key={index}
-              to={item.path}
-              className={sharedClasses}
-              onClick={() => setIsMenuOpen(false)} 
+      {/* Backdrop Overlay */}
+      <div
+        className={`fixed inset-0 bg-black transition-opacity duration-300 md:hidden z-40 ${
+          isMenuOpen ? "opacity-50 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
+
+      {/* Drawer */}
+      <div
+        ref={menuRef}
+        className={`fixed top-0 right-0 h-screen bg-white shadow-2xl w-64 z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col h-full p-6">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-xl font-semibold text-gray-800">Menu</h2>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-600 hover:text-black transition-colors"
             >
-              {item.icon}
-              {item.label}
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <div className="flex flex-col space-y-6">
+            {menuItems.map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                className={`${sharedClasses} transition-colors duration-200`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.icon}
+                {item.label}
+              </Link>
+            ))}
+            <Link
+              to="/contact"
+              className={`${sharedClasses} transition-colors duration-200`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <MailIcon className="w-5 h-5 text-gray-600 stroke-1" />
+              Contact me
             </Link>
-          ))}
-          <div className={sharedClasses}>
-          <Link to="/contact" className={sharedClasses}>
-          <MailIcon className="w-5 h-5 text-gray-600 stroke-1" />
-          Contact me
-        </Link>
-      </div>
+          </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
