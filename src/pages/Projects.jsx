@@ -59,6 +59,14 @@ const Projects = () => {
       image: '/assets/umault.png', 
     },
     {
+      title: 'Haunted House',
+      description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+      tags: ['React', 'Three.js', 'Javascript'],
+      demoLink: 'https://haunted-house-sigma-cyan.vercel.app/',
+      githubLink: 'https://github.com/ayeshaMalik86/hauntedHouse',
+      image: '/assets/haunted-house.png', 
+    },
+    {
       title: 'Sports Page',
       description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
       tags: ['React', 'Tailwind CSS', 'JavaScript','Framer Motion','Three.js'],
